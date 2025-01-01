@@ -1,6 +1,7 @@
 mod commons;
-mod d6;
+
+mod d5;
 
 fn main() {
-    d6::run();
+    d5::run();
 }

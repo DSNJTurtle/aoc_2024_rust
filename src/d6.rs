@@ -1,5 +1,6 @@
 extern crate num;
 use crate::commons::read_file::read_to_vec_str;
+use crate::commons::show_and_check::show_and_check;
 use num::complex::Complex;
 use std::collections::HashSet;
 use std::time::Instant;
@@ -8,14 +9,12 @@ pub(crate) fn run() {
     let test_lines = read_to_vec_str("test.txt").unwrap();
     let input_lines = read_to_vec_str("input.txt").unwrap();
 
-    println!("part A");
-    println!("Test result: {}", part_a(&test_lines));
-    println!("Input result: {}", part_a(&input_lines));
+    show_and_check("A", true, part_a(&test_lines) as i64, Some(41));
+    show_and_check("A", false, part_a(&input_lines) as i64, Some(5564));
 
-    println!("part B");
-    println!("Test result: {}", part_b(&test_lines));
+    show_and_check("B", true, part_b(&test_lines) as i64, Some(6));
     let before = Instant::now();
-    println!("Input result: {}", part_b(&input_lines));
+    show_and_check("B", false, part_b(&input_lines) as i64, Some(1976));
     println!("Elapsed time: {:.2?}", before.elapsed());
 }
 
