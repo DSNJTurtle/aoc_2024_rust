@@ -1,7 +1,7 @@
 mod commons;
 
-mod d8;
+mod d9;
 
 fn main() {
-    d8::run();
+    d9::run();
 }
