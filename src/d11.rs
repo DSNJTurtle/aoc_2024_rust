@@ -61,10 +61,10 @@ fn solve_b(lines: &Vec<String>, n_iter: u8) -> u128 {
         .sum::<u128>()
 }
 
-fn part_a(lines: &Vec<String>) -> i64 {
-    solve_b(lines, 25) as i64
+fn part_a(lines: &Vec<String>) -> u128 {
+    solve_b(lines, 25)
 }
 
-fn part_b(lines: &Vec<String>) -> i64 {
-    solve_b(lines, 75) as i64
+fn part_b(lines: &Vec<String>) -> u128 {
+    solve_b(lines, 75)
 }

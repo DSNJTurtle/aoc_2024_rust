@@ -1,4 +1,11 @@
-pub fn show_and_check(part: &str, is_test: bool, result: i64, expected_result: Option<i64>) {
+use std::fmt::Debug;
+
+pub fn show_and_check<T: std::fmt::Display + PartialEq + Debug>(
+    part: &str,
+    is_test: bool,
+    result: T,
+    expected_result: Option<T>,
+) {
     println!("Part {}", part);
     if is_test {
         println!("For test file")
